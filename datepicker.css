@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Nunito", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 100vh;
+  margin-top: 100px;
+  background-color: rgb(87, 60, 100);
+  position: relative;
+  padding: 0 10%;
+}
+.datepicker {
+  position: relative;
+  text-align: center;
+}
+.datepicker h1 {
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 20px;
+}
+.input__datepicker {
+  padding: 10px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.calendar {
+  background-color: #fff;
+  box-shadow: 1px 20px 300px rgba(0, 0, 0, 0.5);
+  height: 380px;
+  width: 280px;
+
+  transform: scale(0);
+  transition: all 0.3s ease-in-out;
+  position: absolute;
+}
+
+.open {
+  transform: scale(1);
+
+  opacity: 1;
+}
+.calendar__header {
+  background-color: #222222;
+  color: #fff;
+  display: flex;
+  height: 100px;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+}
+.calendar__header-exit {
+  position: absolute;
+  top: 0;
+  right: 8px;
+  font-size: 25px;
+  padding: 0;
+  cursor: pointer;
+  margin: 0;
+  transform: scaleX(1.2);
+  display: block;
+}
+
+.calendar__header span {
+  font-size: 12px;
+  cursor: pointer;
+}
+.calendar__header h1 {
+  font-size: 24px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.calendar__header h1 p {
+  font-size: 12px;
+}
+.calendar__weekends {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+}
+.calendar__weekends div {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calendar__days {
+  display: flex;
+  flex-wrap: wrap;
+  cursor: pointer;
+}
+.calendar__days div {
+  height: 40px;
+  width: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.calendar__days div:hover {
+  background-color: rgb(214, 214, 214);
+}
